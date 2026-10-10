@@ -1,0 +1,1978 @@
+2026-06-29 10:22:33 [INFO] Application bootstrapper initialized.
+2026-06-29 10:22:33 [INFO] Database initialization started.
+2026-06-29 10:22:35 [INFO] Executing SQL non-query: IF NOT EXISTS (    SELECT * FROM sys.objects     WHERE object_id = OBJECT_ID(N'[dbo].[ErrorLog]') AND type IN (N'U')) BEGIN     CREATE TABLE [dbo].[ErrorLog] (        [Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,        [Message] NVARCHAR(1000) NOT NULL,        [CreatedDate] DATETIME NOT NULL DEFAULT(GETDATE())    )END
+2026-06-29 10:22:35 [INFO] Executing SQL non-query: IF NOT EXISTS (    SELECT * FROM sys.objects     WHERE object_id = OBJECT_ID(N'[dbo].[sync_config]') AND type IN (N'U')) BEGIN     CREATE TABLE [dbo].[sync_config] (        [sync_key] NVARCHAR(200) NOT NULL PRIMARY KEY,        [last_run] DATETIME NULL    )END
+2026-06-29 10:22:35 [INFO] Database initialization completed.
+2026-06-29 10:22:35 [INFO] Database initializer returned true.
+2026-06-29 10:22:35 [INFO] Using DB Connection: MainDbConnectionRemote
+2026-06-29 10:22:35 [INFO] User: admin
+2026-06-29 10:22:35 [INFO] Privilege: 7
+2026-06-29 10:22:35 [INFO] user loged in
+2026-06-29 10:22:36 [INFO] Next refresh run at: 2026-06-29 10:22:36
+2026-06-29 10:22:36 [INFO] Running periodic checks for production monitor service.
+2026-06-29 10:22:36 [INFO] Executing SQL non-query: if ((select count(tid) from epicsProduction2 where status=-2)=1) begin declare @productionOrderOfCurrent int; set @productionOrderOfCurrent=(select min(productionOrder) from epicsProduction2 where (status=0 or status=-2) and quantityInBaskets=0); declare @tidOfNext int; if ((select count(tid) from epicsProduction2 where status=-2 and quantityInBaskets=0)>0) begin set @tidOfNext=(select tid from epicsProduction2 where status=-2 and quantityInBaskets=0) update epicsProduction2 set productionOrder=@productionOrderOfCurrent where tid=@tidOfNext; update epicsProduction2 set quantityInBaskets=0,doubleLength=0,onNextBasket=0,onNextLayer=0,status=0 where tid=@tidOfNext; update users set needsUpdate=1 DECLARE @tid int; DECLARE @incrementOrder int; set @incrementOrder=@productionOrderOfCurrent; DECLARE crs CURSOR READ_ONLY FOR SELECT tid FROM epicsProduction2 where status=0 and tid<>@tidOfNext and quantityInBaskets=0 order by productionOrder OPEN crs FETCH NEXT FROM crs INTO @tid WHILE @@FETCH_STATUS = 0 BEGIN set @incrementOrder=@incrementOrder+1; update epicsProduction2 set productionOrder=@incrementOrder where tid=@tid; FETCH NEXT FROM crs INTO @tid END CLOSE crs DEALLOCATE crs end end
+2026-06-29 10:22:36 [INFO] Executing SQL non-query: if ((select count(tid) from epicsProduction2 where status=-1)>0) begin update epicsProduction2 set quantityInBaskets=0,doubleLength=0,onNextBasket=0,onNextLayer=0,status=0 where status=-1 update users set needsUpdate=1 end
+2026-06-29 10:22:36 [INFO] Resetting user needs update for 'admin'.
+2026-06-29 10:22:36 [INFO] Resetting user needs update for 'admin'.
+2026-06-29 10:22:36 [INFO] Executing query: SELECT TOP 1 SONUM, SOITEMNUM, LOT FROM [SAE01PRESS01].[apex].[dbo].[SAW_JOB] WHERE START_DT IS NOT NULL AND STOP_DT IS NULL;  | Connection: MainDbConnectionRemote
+2026-06-29 10:22:36 [INFO] Executing SQL non-query: UPDATE ep SET ep.totalQuantity = src.RunPc FROM[StackPlan].dbo.epicsProduction2 ep OUTER APPLY ( SELECT TOP(1) sid.RunPc FROM[Epics].[foy].[SOItemDept] sid WHERE sid.SONUM = TRY_CONVERT(int, PARSENAME(REPLACE(LTRIM(RTRIM(ep.soNum)), '-', '.'), 3)) AND sid.SOItemNum = TRY_CONVERT(int, PARSENAME(REPLACE(LTRIM(RTRIM(ep.soNum)), '-', '.'), 2)) AND sid.deptNum = 'ORDER' ) src 
+2026-06-29 10:22:36 [INFO] Executing SQL non-query: UPDATE ep SET ep.quantityInBaskets = ISNULL(src.total_in_baskets, 0) FROM StackPlan.dbo.epicsProduction2 ep OUTER APPLY (     SELECT SUM(ls.total_pcs) AS total_in_baskets     FROM StackPlan.dbo.LayerSummary ls     WHERE ls.sonum = ep.soNum ) src WHERE ep.pressNum = 1   AND ep.status = 0
+2026-06-29 10:22:36 [INFO] Executing query: WITH DedupedProduction AS (    SELECT         tid,        productionOrder,        die,        profileSpacing,        inComb,        totalQuantity,        quantityInBaskets,        linearDencity,        length,        doubleLength,        status,        onNextBasket,        onNextLayer,        temper,        soNum,        scheduleDate,        scheduleShift,        isVirtual,        billetsNo,        billetLength,        billetButtLength,        scrapFrontLength,        scrapRearLength,        runOutLength,        dieMultiplicity,        ROW_NUMBER() OVER (            PARTITION BY LTRIM(RTRIM(soNum)), die, pressNum             ORDER BY productionOrder ASC, tid ASC        ) AS rn     FROM [stackplan].[dbo].epicsProduction2     WHERE status=0       AND quantityInBaskets < totalQuantity       AND pressNum=1       AND (          '96004-2-1' = ''           OR productionOrder >= ISNULL((              SELECT TOP 1 productionOrder               FROM [stackplan].[dbo].epicsProduction2               WHERE pressNum = 1                 AND LTRIM(RTRIM(soNum)) = '96004-2-1'               ORDER BY productionOrder ASC          ), productionOrder)      ) ) SELECT     tid,    productionOrder,    die,    profileSpacing,    inComb,    totalQuantity,    quantityInBaskets,    linearDencity,    length,    doubleLength,    status,    onNextBasket,    onNextLayer,    temper,    soNum,    scheduleDate,    scheduleShift,    isVirtual,    billetsNo,    billetLength,    billetButtLength,    scrapFrontLength,    scrapRearLength,    runOutLength,    dieMultiplicity FROM DedupedProduction WHERE rn = 1 ORDER BY productionOrder | Connection: MainDbConnectionRemote
+2026-06-29 10:22:36 [INFO] Executing query: select RTRIM(temper) from temperTypes  | Connection: basketCraneConnectionRemote
+2026-06-29 10:22:37 [INFO] Executing query: select temperType from temperTypes  | Connection: basketCraneConnectionRemote
+2026-06-29 10:22:38 [INFO] Executing SQL non-query: if not exists (select die from profileCode where die=1013) insert into profileCode (die,interProfileSpace,angle,multiplicity,inComb,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8) values (1013,0,0,1,0,0,0,0,0,0,0,0,0)
+2026-06-29 10:22:38 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=1013 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:38 [INFO] Executing SQL non-query: if not exists (select die from profileCode where die=2773) insert into profileCode (die,interProfileSpace,angle,multiplicity,inComb,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8) values (2773,0,0,1,0,0,0,0,0,0,0,0,0)
+2026-06-29 10:22:38 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=2773 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:38 [INFO] Executing SQL non-query: if not exists (select die from profileCode where die=6906) insert into profileCode (die,interProfileSpace,angle,multiplicity,inComb,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8) values (6906,0,0,1,0,0,0,0,0,0,0,0,0)
+2026-06-29 10:22:38 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=6906 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:38 [INFO] Executing SQL query: select value from settings where name='namelayerMinSuportLength'
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+				SELECT TOP 1 basket_id
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				AND basket_id IS NOT NULL
+				AND basket_id > 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:39 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			  AND basket_id = 0
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:39 [INFO] Executing query: 
+			SELECT 
+    ep.soNum,
+    ep.die,
+    ep.productionOrder,
+    ep.pressNum,
+    ep.temper,
+
+    ISNULL(ep.tid, 0)               AS tid,
+    ISNULL(ep.totalQuantity, 0)     AS totalQuantity,
+    ISNULL(ep.quantityInBaskets, 0) AS quantityInBaskets,
+    ISNULL(ep.linearDencity, 0)     AS linearDencity,
+    ISNULL(ep.length, 0)            AS profileLength,
+    ISNULL(ep.doubleLength, 0)      AS doubleLength,
+    ISNULL(ep.status, 0)            AS status,
+    ISNULL(ep.onNextBasket, 0)      AS onNextBasket,
+    ISNULL(ep.onNextLayer, 0)       AS onNextLayer,
+    ISNULL(ep.scheduleDate, '')     AS scheduleDate,
+    ISNULL(ep.scheduleShift, 1)     AS scheduleShift
+FROM StackPlan.dbo.epicsProduction2 ep
+WHERE ep.pressNum = 1
+  AND ep.soNum = (
+        SELECT TOP (1)
+            CONCAT(SONUM, '-', SOITEMNUM, '-', LOT)
+        FROM [SAE01PRESS01].[APEX].[dbo].[SAW_JOB]
+        WHERE START_DT IS NOT NULL
+          AND STOP_DT IS NOT NULL
+        ORDER BY STOP_DT DESC
+  );
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:39 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=1016 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:39 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96144-23-1'
+			  AND dienumber = 1016
+			  AND pressnum = 1
+			  AND basket_id = 0
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:39 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 4
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 4
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 6
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:40 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 6
+				ORDER BY id DESC
+			
+2026-06-29 10:22:40 [INFO] Executing SQL non-query: update epicsProduction2 set baskets=1 where soNum='96004-2-1'
+2026-06-29 10:22:41 [INFO] Executing SQL query: select temperType from temperTypes where id=4
+2026-06-29 10:22:41 [WARN] ExecuteScalar warning: [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid object name 'temperTypes'. [Microsoft][ODBC SQL Server Driver][SQL Server]The cursor was not declared. QODBC3: Unable to execute statement | SQL: select temperType from temperTypes where id=4 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:41 [INFO] Executing SQL query: select temperType from temperTypes where id=4
+2026-06-29 10:22:41 [WARN] ExecuteScalar warning: [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid object name 'temperTypes'. [Microsoft][ODBC SQL Server Driver][SQL Server]The cursor was not declared. QODBC3: Unable to execute statement | SQL: select temperType from temperTypes where id=4 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+				SELECT TOP 1 basket_id
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				AND basket_id IS NOT NULL
+				AND basket_id > 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:41 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			  AND basket_id = 45
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL non-query: update epicsProduction2 set baskets=2 where soNum='96192-1-1'
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+				SELECT TOP 1 basket_id
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				AND basket_id IS NOT NULL
+				AND basket_id > 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:41 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			  AND basket_id = 45
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:41 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:42 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:43 [INFO] Executing SQL non-query: update epicsProduction2 set baskets=4 where soNum='96127-1-1'
+2026-06-29 10:22:43 [INFO] Next refresh run at: 2026-06-29 10:22:43
+2026-06-29 10:22:43 [INFO] Next refresh run at: 2026-06-29 10:22:45
+2026-06-29 10:22:43 [INFO] Resetting user needs update for 'admin'.
+2026-06-29 10:22:44 [INFO] Executing query: SELECT TOP 1 SONUM, SOITEMNUM, LOT FROM [SAE01PRESS01].[apex].[dbo].[SAW_JOB] WHERE START_DT IS NOT NULL AND STOP_DT IS NULL;  | Connection: MainDbConnectionRemote
+2026-06-29 10:22:44 [INFO] Executing SQL non-query: UPDATE ep SET ep.totalQuantity = src.RunPc FROM[StackPlan].dbo.epicsProduction2 ep OUTER APPLY ( SELECT TOP(1) sid.RunPc FROM[Epics].[foy].[SOItemDept] sid WHERE sid.SONUM = TRY_CONVERT(int, PARSENAME(REPLACE(LTRIM(RTRIM(ep.soNum)), '-', '.'), 3)) AND sid.SOItemNum = TRY_CONVERT(int, PARSENAME(REPLACE(LTRIM(RTRIM(ep.soNum)), '-', '.'), 2)) AND sid.deptNum = 'ORDER' ) src 
+2026-06-29 10:22:44 [INFO] Executing SQL non-query: UPDATE ep SET ep.quantityInBaskets = ISNULL(src.total_in_baskets, 0) FROM StackPlan.dbo.epicsProduction2 ep OUTER APPLY (     SELECT SUM(ls.total_pcs) AS total_in_baskets     FROM StackPlan.dbo.LayerSummary ls     WHERE ls.sonum = ep.soNum ) src WHERE ep.pressNum = 1   AND ep.status = 0
+2026-06-29 10:22:44 [INFO] Executing query: WITH DedupedProduction AS (    SELECT         tid,        productionOrder,        die,        profileSpacing,        inComb,        totalQuantity,        quantityInBaskets,        linearDencity,        length,        doubleLength,        status,        onNextBasket,        onNextLayer,        temper,        soNum,        scheduleDate,        scheduleShift,        isVirtual,        billetsNo,        billetLength,        billetButtLength,        scrapFrontLength,        scrapRearLength,        runOutLength,        dieMultiplicity,        ROW_NUMBER() OVER (            PARTITION BY LTRIM(RTRIM(soNum)), die, pressNum             ORDER BY productionOrder ASC, tid ASC        ) AS rn     FROM [stackplan].[dbo].epicsProduction2     WHERE status=0       AND quantityInBaskets < totalQuantity       AND pressNum=1       AND (          '96004-2-1' = ''           OR productionOrder >= ISNULL((              SELECT TOP 1 productionOrder               FROM [stackplan].[dbo].epicsProduction2               WHERE pressNum = 1                 AND LTRIM(RTRIM(soNum)) = '96004-2-1'               ORDER BY productionOrder ASC          ), productionOrder)      ) ) SELECT     tid,    productionOrder,    die,    profileSpacing,    inComb,    totalQuantity,    quantityInBaskets,    linearDencity,    length,    doubleLength,    status,    onNextBasket,    onNextLayer,    temper,    soNum,    scheduleDate,    scheduleShift,    isVirtual,    billetsNo,    billetLength,    billetButtLength,    scrapFrontLength,    scrapRearLength,    runOutLength,    dieMultiplicity FROM DedupedProduction WHERE rn = 1 ORDER BY productionOrder | Connection: MainDbConnectionRemote
+2026-06-29 10:22:44 [INFO] Executing query: select RTRIM(temper) from temperTypes  | Connection: basketCraneConnectionRemote
+2026-06-29 10:22:44 [INFO] Executing query: select temperType from temperTypes  | Connection: basketCraneConnectionRemote
+2026-06-29 10:22:44 [INFO] Executing SQL non-query: if not exists (select die from profileCode where die=1013) insert into profileCode (die,interProfileSpace,angle,multiplicity,inComb,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8) values (1013,0,0,1,0,0,0,0,0,0,0,0,0)
+2026-06-29 10:22:45 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=1013 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:45 [INFO] Executing SQL non-query: if not exists (select die from profileCode where die=2773) insert into profileCode (die,interProfileSpace,angle,multiplicity,inComb,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8) values (2773,0,0,1,0,0,0,0,0,0,0,0,0)
+2026-06-29 10:22:45 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=2773 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:45 [INFO] Executing SQL non-query: if not exists (select die from profileCode where die=6906) insert into profileCode (die,interProfileSpace,angle,multiplicity,inComb,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8) values (6906,0,0,1,0,0,0,0,0,0,0,0,0)
+2026-06-29 10:22:45 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=6906 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:45 [INFO] Executing SQL query: select value from settings where name='namelayerMinSuportLength'
+2026-06-29 10:22:45 [INFO] Executing SQL query: 
+				SELECT TOP 1 basket_id
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				AND basket_id IS NOT NULL
+				AND basket_id > 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:45 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			  AND basket_id = 45
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:46 [INFO] Executing query: 
+			SELECT 
+    ep.soNum,
+    ep.die,
+    ep.productionOrder,
+    ep.pressNum,
+    ep.temper,
+
+    ISNULL(ep.tid, 0)               AS tid,
+    ISNULL(ep.totalQuantity, 0)     AS totalQuantity,
+    ISNULL(ep.quantityInBaskets, 0) AS quantityInBaskets,
+    ISNULL(ep.linearDencity, 0)     AS linearDencity,
+    ISNULL(ep.length, 0)            AS profileLength,
+    ISNULL(ep.doubleLength, 0)      AS doubleLength,
+    ISNULL(ep.status, 0)            AS status,
+    ISNULL(ep.onNextBasket, 0)      AS onNextBasket,
+    ISNULL(ep.onNextLayer, 0)       AS onNextLayer,
+    ISNULL(ep.scheduleDate, '')     AS scheduleDate,
+    ISNULL(ep.scheduleShift, 1)     AS scheduleShift
+FROM StackPlan.dbo.epicsProduction2 ep
+WHERE ep.pressNum = 1
+  AND ep.soNum = (
+        SELECT TOP (1)
+            CONCAT(SONUM, '-', SOITEMNUM, '-', LOT)
+        FROM [SAE01PRESS01].[APEX].[dbo].[SAW_JOB]
+        WHERE START_DT IS NOT NULL
+          AND STOP_DT IS NOT NULL
+        ORDER BY STOP_DT DESC
+  );
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:46 [INFO] Executing query: select interProfileSpace, multiplicity, inComb, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, angle from profileCode where die=1016 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:46 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96144-23-1'
+			  AND dienumber = 1016
+			  AND pressnum = 1
+			  AND basket_id = 45
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 1
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 1
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 1
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 1
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 2
+				ORDER BY id DESC
+			
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:46 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 2
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 2
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 2
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 3
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 3
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 3
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 3
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 4
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 4
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 4
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 4
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:47 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 5
+				ORDER BY id DESC
+			
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 6
+				ORDER BY id DESC
+			
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96004-2-1'
+			  AND dienumber = 1013
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+				SELECT TOP 1 total_pcs
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				  AND basket_id = 45
+				  AND ln_basket = 6
+				ORDER BY id DESC
+			
+2026-06-29 10:22:48 [INFO] Executing SQL non-query: update epicsProduction2 set baskets=1 where soNum='96004-2-1'
+2026-06-29 10:22:48 [INFO] Next refresh run at: 2026-06-29 10:24:48
+2026-06-29 10:22:48 [INFO] Executing SQL query: select temperType from temperTypes where id=4
+2026-06-29 10:22:48 [WARN] ExecuteScalar warning: [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid object name 'temperTypes'. [Microsoft][ODBC SQL Server Driver][SQL Server]The cursor was not declared. QODBC3: Unable to execute statement | SQL: select temperType from temperTypes where id=4 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:48 [INFO] Executing SQL query: select temperType from temperTypes where id=4
+2026-06-29 10:22:48 [WARN] ExecuteScalar warning: [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid object name 'temperTypes'. [Microsoft][ODBC SQL Server Driver][SQL Server]The cursor was not declared. QODBC3: Unable to execute statement | SQL: select temperType from temperTypes where id=4 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+				SELECT TOP 1 basket_id
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				AND basket_id IS NOT NULL
+				AND basket_id > 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:48 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			  AND basket_id = 45
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:48 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:49 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96192-1-1'
+			  AND dienumber = 2773
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:49 [INFO] Executing SQL non-query: update epicsProduction2 set baskets=2 where soNum='96192-1-1'
+2026-06-29 10:22:49 [INFO] Executing SQL query: 
+				SELECT TOP 1 basket_id
+				FROM StackPlan.dbo.LayerSummary
+				WHERE sonum = '96004-2-1'
+				  AND dienumber = 1013
+				  AND pressnum = 1
+				AND basket_id IS NOT NULL
+				AND basket_id > 0
+				ORDER BY id DESC
+			
+2026-06-29 10:22:49 [INFO] Executing query: 
+			SELECT total_pcs
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			  AND basket_id = 45
+			ORDER BY id asc
+		 | Connection: MainDbConnectionRemote
+2026-06-29 10:22:49 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:49 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:49 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:50 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:51 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL query: 
+			SELECT TOP 1 basket_id
+			FROM StackPlan.dbo.LayerSummary
+			WHERE sonum = '96127-1-1'
+			  AND dienumber = 6906
+			  AND pressnum = 1
+			ORDER BY id DESC
+		
+2026-06-29 10:22:52 [INFO] Executing SQL non-query: update epicsProduction2 set baskets=4 where soNum='96127-1-1'
+2026-06-29 10:22:52 [INFO] Next refresh run at: 2026-06-29 10:24:52
+2026-06-29 10:22:53 [INFO] Next refresh run at: 2026-06-29 10:24:53
+2026-06-29 10:22:55 [INFO] Next refresh run at: 2026-06-29 10:24:55
+2026-06-29 10:22:57 [INFO] Next refresh run at: 2026-06-29 10:24:57
+2026-06-29 10:22:59 [INFO] Next refresh run at: 2026-06-29 10:24:59
+2026-06-29 10:23:01 [INFO] Next refresh run at: 2026-06-29 10:25:01
+2026-06-29 10:23:03 [INFO] Next refresh run at: 2026-06-29 10:25:03
+2026-06-29 10:23:05 [INFO] Next refresh run at: 2026-06-29 10:25:05

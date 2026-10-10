@@ -1,0 +1,6 @@
+BuiltPdbOutput	C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\ApexBasketCrane-Debug-x86.wixpdb
+BuiltTargetOutput	C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\ApexBasketCrane-Debug-x86.msi
+Input	..\icon\icon.ico
+Input	C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\#builds\apexbasketcrane1\apexbasketcrane1D.exe
+Input	C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\#builds\apexbasketcrane1\basketCrane.ini
+Intermediate	C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\#cab1.cab

@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Dev\\Assimakis\\development\\exe\\apex\\packetCraneStation\\sln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57222B15-5A3D-483B-B4E3-7FD7AEE65F77}|apexPacketCraneStation.5.7.0.vcxproj|C:\\Dev\\Assimakis\\development\\#moc\\apex\\packetCraneStation\\mocFiles.5.1.1\\stWestW.h.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57222B15-5A3D-483B-B4E3-7FD7AEE65F77}|apexPacketCraneStation.5.7.0.vcxproj|C:\\Dev\\Assimakis\\development\\exe\\apex\\packetCraneStation\\mW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "stWestW.h.cpp",
+              "DocumentMoniker": "C:\\Dev\\Assimakis\\development\\#moc\\apex\\packetCraneStation\\mocFiles.5.1.1\\stWestW.h.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\#moc\\apex\\packetCraneStation\\mocFiles.5.1.1\\stWestW.h.cpp",
+              "ToolTip": "C:\\Dev\\Assimakis\\development\\#moc\\apex\\packetCraneStation\\mocFiles.5.1.1\\stWestW.h.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\#moc\\apex\\packetCraneStation\\mocFiles.5.1.1\\stWestW.h.cpp",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAswFQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-16T23:31:36.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mW.cpp",
+              "DocumentMoniker": "C:\\Dev\\Assimakis\\development\\exe\\apex\\packetCraneStation\\mW.cpp",
+              "RelativeDocumentMoniker": "..\\mW.cpp",
+              "ToolTip": "C:\\Dev\\Assimakis\\development\\exe\\apex\\packetCraneStation\\mW.cpp",
+              "RelativeToolTip": "..\\mW.cpp",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-16T23:26:50.026Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

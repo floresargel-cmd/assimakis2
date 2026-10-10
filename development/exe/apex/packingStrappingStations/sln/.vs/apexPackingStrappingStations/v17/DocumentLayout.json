@@ -1,0 +1,343 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\sln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\mW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\stationWdgt.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\Gstr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\m.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\stationWdgt.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\Gstr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posDlgPackingFork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\serialPortDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\mW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posPackingFork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posPackingFork.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posDlgPackingFork.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\serialPortDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459D9DF5-0C4C-434A-A286-18C15337D50A}|apexPackingStrappingStations.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\resources\\recources.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\Gf.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 506,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "G.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.h",
+              "RelativeDocumentMoniker": "..\\..\\G.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.h",
+              "RelativeToolTip": "..\\..\\G.h",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAhwJEAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T19:02:35.488Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "G.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.cpp",
+              "RelativeDocumentMoniker": "..\\..\\G.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.cpp",
+              "RelativeToolTip": "..\\..\\G.cpp",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAhwF4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:02:36.113Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Gs.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h",
+              "RelativeDocumentMoniker": "..\\..\\Gs.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h",
+              "RelativeToolTip": "..\\..\\Gs.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T19:02:37.409Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Gs.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp",
+              "RelativeDocumentMoniker": "..\\..\\Gs.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp",
+              "RelativeToolTip": "..\\..\\Gs.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:02:37.944Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Gstr.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\Gstr.h",
+              "RelativeDocumentMoniker": "..\\Gstr.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\Gstr.h",
+              "RelativeToolTip": "..\\Gstr.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T19:02:38.769Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gstr.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\Gstr.cpp",
+              "RelativeDocumentMoniker": "..\\Gstr.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\Gstr.cpp",
+              "RelativeToolTip": "..\\Gstr.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:02:39.296Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "m.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\m.cpp",
+              "RelativeDocumentMoniker": "..\\m.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\m.cpp",
+              "RelativeToolTip": "..\\m.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:02:39.961Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "mW.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\mW.h",
+              "RelativeDocumentMoniker": "..\\mW.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\mW.h",
+              "RelativeToolTip": "..\\mW.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T19:02:40.632Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mW.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\mW.cpp",
+              "RelativeDocumentMoniker": "..\\mW.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\mW.cpp",
+              "RelativeToolTip": "..\\mW.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:02:41.192Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "stationWdgt.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\stationWdgt.h",
+              "RelativeDocumentMoniker": "..\\stationWdgt.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\stationWdgt.h",
+              "RelativeToolTip": "..\\stationWdgt.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAgwBEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T19:02:41.872Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "stationWdgt.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\stationWdgt.cpp",
+              "RelativeDocumentMoniker": "..\\stationWdgt.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\stationWdgt.cpp",
+              "RelativeToolTip": "..\\stationWdgt.cpp",
+              "ViewState": "AQIAADMAAAAAAAAAAIAwwEkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:02:42.696Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "posPackingFork.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posPackingFork.h",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\posPackingFork.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posPackingFork.h",
+              "RelativeToolTip": "..\\..\\packingFork\\posPackingFork.h",
+              "ViewState": "AQIAABEAAAAAAAAAAAApwCEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-06T18:30:31.986Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "posPackingFork.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posPackingFork.cpp",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\posPackingFork.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posPackingFork.cpp",
+              "RelativeToolTip": "..\\..\\packingFork\\posPackingFork.cpp",
+              "ViewState": "AQIAAGUAAAAAAAAAAIBJwBAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-06T19:38:12.343Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "posDlgPackingFork.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posDlgPackingFork.h",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\posDlgPackingFork.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posDlgPackingFork.h",
+              "RelativeToolTip": "..\\..\\packingFork\\posDlgPackingFork.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-06T18:26:18.407Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "posDlgPackingFork.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posDlgPackingFork.cpp",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\posDlgPackingFork.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\posDlgPackingFork.cpp",
+              "RelativeToolTip": "..\\..\\packingFork\\posDlgPackingFork.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAD4vxsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-06T19:18:47.166Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "serialPortDlg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\serialPortDlg.h",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\serialPortDlg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\serialPortDlg.h",
+              "RelativeToolTip": "..\\..\\packingFork\\serialPortDlg.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T17:36:04.58Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "serialPortDlg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\serialPortDlg.cpp",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\serialPortDlg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\serialPortDlg.cpp",
+              "RelativeToolTip": "..\\..\\packingFork\\serialPortDlg.cpp",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFoAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T17:36:05.988Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "recources.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\resources\\recources.cpp",
+              "RelativeDocumentMoniker": "..\\resources\\recources.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\resources\\recources.cpp",
+              "RelativeToolTip": "..\\resources\\recources.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-06T17:01:14.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\pch.h",
+              "RelativeDocumentMoniker": "..\\pch.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingStrappingStations\\pch.h",
+              "RelativeToolTip": "..\\pch.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T17:36:32.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Gf.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\Gf.h",
+              "RelativeDocumentMoniker": "..\\..\\packingFork\\Gf.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\packingFork\\Gf.h",
+              "RelativeToolTip": "..\\..\\packingFork\\Gf.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T17:43:27.643Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

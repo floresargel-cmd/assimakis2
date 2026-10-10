@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "targets": {
+    "native,Version=v0.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "native,Version=v0.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\aflores\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\basketCrane1\\installer\\ApexBasketCrane.Installer.wixproj",
+      "projectName": "ApexBasketCrane-Debug-x86",
+      "projectPath": "C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\basketCrane1\\installer\\ApexBasketCrane.Installer.wixproj",
+      "packagesPath": "C:\\Users\\aflores\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\basketCrane1\\installer\\obj\\",
+      "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\aflores\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "native"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "native": {
+          "framework": "native",
+          "targetAlias": "native",
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "native": {
+        "framework": "native",
+        "targetAlias": "native"
+      }
+    }
+  }
+}

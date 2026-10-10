@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/basketCrane2</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommand>\\20.20.20.79\assimakis\workingExes\basketCrane2\apexBasketCrane2.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>\\20.20.20.79\assimakis\workingExes\basketCrane2\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>20.20.20.79</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugRemote|win32'">
+    <LocalDebuggerWorkingDirectory>C:\assimakis\workingExes\crane3\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommand>C:\assimakis\workingExes\basketCrane2\apexBasketCrane2.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\assimakis\workingExes\basketCrane2\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>20.20.20.79</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+    <LocalDebuggerCommand>C:\assimakis\workingExes\crane3\apexBasketCrane3.5.7.0D.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/basketCrane2</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

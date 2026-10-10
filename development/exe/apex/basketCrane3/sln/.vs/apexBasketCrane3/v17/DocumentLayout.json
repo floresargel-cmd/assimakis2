@@ -1,0 +1,745 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\sln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\_deploy\\includes\\utilities\\sqlu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bCont.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\allPos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bCont.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\crane.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\expWdg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\expWdg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\autoWdg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\mW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\crane.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\allPos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\myLibs\\tuxIp\\sendData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conAllPos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\carriage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\autoWdg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\basketCrane3UserWdgt.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\inc\\corecrt_internal_stdio_output.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\destW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bSelect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\Gb3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\destW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\Gb3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\carriage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\mW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\m.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\internal\\locks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\myLibs\\tuxIp\\plcTable.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\posDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\posDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\hmiDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\hmiDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\basketCrane3UserWdgt.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPosDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPosDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conAllPos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{432686F9-29AA-426A-A266-B70CE8378D8B}|apexBasketCrane3.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\#qt\\qt.5.7.0.static.x32\\qtbase\\src\\corelib\\tools\\qlist.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "G.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.h",
+              "RelativeDocumentMoniker": "..\\..\\G.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.h",
+              "RelativeToolTip": "..\\..\\G.h",
+              "ViewState": "AQIAAD8AAAAAAAAAAAApwFYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T22:22:17.885Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "G.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.cpp",
+              "RelativeDocumentMoniker": "..\\..\\G.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\G.cpp",
+              "RelativeToolTip": "..\\..\\G.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAEB1wD8AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-08T16:18:54.68Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Gs.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h",
+              "RelativeDocumentMoniker": "..\\..\\Gs.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h",
+              "RelativeToolTip": "..\\..\\Gs.h",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAAAMcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-08T19:17:40.538Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Gs.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp",
+              "RelativeDocumentMoniker": "..\\..\\Gs.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp",
+              "RelativeToolTip": "..\\..\\Gs.cpp",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAgwJ0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T22:44:10.031Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Gb3.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\Gb3.h",
+              "RelativeDocumentMoniker": "..\\Gb3.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\Gb3.h",
+              "RelativeToolTip": "..\\Gb3.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T22:22:17.912Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Gb3.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\Gb3.cpp",
+              "RelativeDocumentMoniker": "..\\Gb3.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\Gb3.cpp",
+              "RelativeToolTip": "..\\Gb3.cpp",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T22:22:17.913Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "m.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\m.cpp",
+              "RelativeDocumentMoniker": "..\\m.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\m.cpp",
+              "RelativeToolTip": "..\\m.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T22:22:17.913Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "mW.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\mW.h",
+              "RelativeDocumentMoniker": "..\\mW.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\mW.h",
+              "RelativeToolTip": "..\\mW.h",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAEwBgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T22:22:17.914Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "mW.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\mW.cpp",
+              "RelativeDocumentMoniker": "..\\mW.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\mW.cpp",
+              "RelativeToolTip": "..\\mW.cpp",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAawFcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T19:18:08.536Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "allPos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\allPos.h",
+              "RelativeDocumentMoniker": "..\\allPos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\allPos.h",
+              "RelativeToolTip": "..\\allPos.h",
+              "ViewState": "AQIAAB0AAAAAAAAAAAApwDIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-08T19:18:58.371Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "allPos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\allPos.cpp",
+              "RelativeDocumentMoniker": "..\\allPos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\allPos.cpp",
+              "RelativeToolTip": "..\\allPos.cpp",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAgwFIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T22:22:18.035Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pos.h",
+              "RelativeDocumentMoniker": "..\\pos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pos.h",
+              "RelativeToolTip": "..\\pos.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwCIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-08T17:55:35.224Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pos.cpp",
+              "RelativeDocumentMoniker": "..\\pos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pos.cpp",
+              "RelativeToolTip": "..\\pos.cpp",
+              "ViewState": "AQIAAKYAAAAAAAAAAAAowLUAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T22:22:18.035Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "crane.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\crane.h",
+              "RelativeDocumentMoniker": "..\\crane.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\crane.h",
+              "RelativeToolTip": "..\\crane.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAhwBwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T22:12:51.286Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "crane.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\crane.cpp",
+              "RelativeDocumentMoniker": "..\\crane.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\crane.cpp",
+              "RelativeToolTip": "..\\crane.cpp",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAgwJQAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T22:22:18.038Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "carriage.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\carriage.h",
+              "RelativeDocumentMoniker": "..\\carriage.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\carriage.h",
+              "RelativeToolTip": "..\\carriage.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T22:13:06.053Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "carriage.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\carriage.cpp",
+              "RelativeDocumentMoniker": "..\\carriage.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\carriage.cpp",
+              "RelativeToolTip": "..\\carriage.cpp",
+              "ViewState": "AQIAABECAAAAAAAAAAAlwBsCAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T22:13:06.701Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "bCont.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bCont.h",
+              "RelativeDocumentMoniker": "..\\bCont.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bCont.h",
+              "RelativeToolTip": "..\\bCont.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T22:46:52.185Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "bCont.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bCont.cpp",
+              "RelativeDocumentMoniker": "..\\bCont.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bCont.cpp",
+              "RelativeToolTip": "..\\bCont.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAtwCEAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T15:43:38.768Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "bSelect.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bSelect.cpp",
+              "RelativeDocumentMoniker": "..\\bSelect.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\bSelect.cpp",
+              "RelativeToolTip": "..\\bSelect.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-29T19:01:20.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "corecrt_internal_stdio_output.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\inc\\corecrt_internal_stdio_output.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\inc\\corecrt_internal_stdio_output.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\inc\\corecrt_internal_stdio_output.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\inc\\corecrt_internal_stdio_output.h",
+              "ViewState": "AQIAAHsGAAAAAAAAAAAtwJIGAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-29T22:15:21.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "basketCrane3UserWdgt.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\basketCrane3UserWdgt.cpp",
+              "RelativeDocumentMoniker": "..\\basketCrane3UserWdgt.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\basketCrane3UserWdgt.cpp",
+              "RelativeToolTip": "..\\basketCrane3UserWdgt.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T17:52:25.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "conPos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPos.cpp",
+              "RelativeDocumentMoniker": "..\\conPos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPos.cpp",
+              "RelativeToolTip": "..\\conPos.cpp",
+              "ViewState": "AQIAAHgAAAAAAAAAAAApwIsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T17:53:28.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "conAllPos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conAllPos.cpp",
+              "RelativeDocumentMoniker": "..\\conAllPos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conAllPos.cpp",
+              "RelativeToolTip": "..\\conAllPos.cpp",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAACYAAACiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T19:40:29.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "conPos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPos.h",
+              "RelativeDocumentMoniker": "..\\conPos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPos.h",
+              "RelativeToolTip": "..\\conPos.h",
+              "ViewState": "AQIAAB0AAAAAAAAAAAApwDAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T17:53:18.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "expWdg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\expWdg.h",
+              "RelativeDocumentMoniker": "..\\expWdg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\expWdg.h",
+              "RelativeToolTip": "..\\expWdg.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T17:54:47.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "expWdg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\expWdg.cpp",
+              "RelativeDocumentMoniker": "..\\expWdg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\expWdg.cpp",
+              "RelativeToolTip": "..\\expWdg.cpp",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T19:19:26.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "autoWdg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\autoWdg.h",
+              "RelativeDocumentMoniker": "..\\autoWdg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\autoWdg.h",
+              "RelativeToolTip": "..\\autoWdg.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T17:54:55.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "autoWdg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\autoWdg.cpp",
+              "RelativeDocumentMoniker": "..\\autoWdg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\autoWdg.cpp",
+              "RelativeToolTip": "..\\autoWdg.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-27T17:54:59.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "sqlu.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\_deploy\\includes\\utilities\\sqlu.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\libs\\_deploy\\includes\\utilities\\sqlu.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\_deploy\\includes\\utilities\\sqlu.h",
+              "RelativeToolTip": "..\\..\\..\\..\\libs\\_deploy\\includes\\utilities\\sqlu.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T23:23:40.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pch.h",
+              "RelativeDocumentMoniker": "..\\pch.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\pch.h",
+              "RelativeToolTip": "..\\pch.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-28T19:47:48.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "posDlg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\posDlg.cpp",
+              "RelativeDocumentMoniker": "..\\posDlg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\posDlg.cpp",
+              "RelativeToolTip": "..\\posDlg.cpp",
+              "ViewState": "AQIAADQAAAAAAAAAAAAMwFsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-22T22:45:07.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "destW.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\destW.cpp",
+              "RelativeDocumentMoniker": "..\\destW.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\destW.cpp",
+              "RelativeToolTip": "..\\destW.cpp",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAB0AAACaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-28T20:28:44.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "sendData.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\myLibs\\tuxIp\\sendData.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\libs\\myLibs\\tuxIp\\sendData.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\myLibs\\tuxIp\\sendData.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\libs\\myLibs\\tuxIp\\sendData.cpp",
+              "ViewState": "AQIAAK0AAAAAAAAAAAApwMYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T16:05:59.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "destW.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\destW.h",
+              "RelativeDocumentMoniker": "..\\destW.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\destW.h",
+              "RelativeToolTip": "..\\destW.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-28T20:28:43.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "locks.cpp",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\internal\\locks.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\internal\\locks.cpp",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\internal\\locks.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.22621.0\\ucrt\\internal\\locks.cpp",
+              "ViewState": "AQIAACUAAAAAAAAAAAArwDoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T18:50:48.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "conAllPos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conAllPos.h",
+              "RelativeDocumentMoniker": "..\\conAllPos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conAllPos.h",
+              "RelativeToolTip": "..\\conAllPos.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T19:38:41.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "plcTable.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\myLibs\\tuxIp\\plcTable.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\libs\\myLibs\\tuxIp\\plcTable.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\myLibs\\tuxIp\\plcTable.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\libs\\myLibs\\tuxIp\\plcTable.cpp",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAQwLgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T16:06:09.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "qlist.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\#qt\\qt.5.7.0.static.x32\\qtbase\\src\\corelib\\tools\\qlist.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\libs\\#qt\\qt.5.7.0.static.x32\\qtbase\\src\\corelib\\tools\\qlist.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\libs\\#qt\\qt.5.7.0.static.x32\\qtbase\\src\\corelib\\tools\\qlist.h",
+              "RelativeToolTip": "..\\..\\..\\..\\libs\\#qt\\qt.5.7.0.static.x32\\qtbase\\src\\corelib\\tools\\qlist.h",
+              "ViewState": "AQIAAHoAAAAAAAAAAAArwIsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T22:31:01.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "hmiDlg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\hmiDlg.cpp",
+              "RelativeDocumentMoniker": "..\\hmiDlg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\hmiDlg.cpp",
+              "RelativeToolTip": "..\\hmiDlg.cpp",
+              "ViewState": "AQIAALAAAAAAAAAAAABxwNUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T22:02:33.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "hmiDlg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\hmiDlg.h",
+              "RelativeDocumentMoniker": "..\\hmiDlg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\hmiDlg.h",
+              "RelativeToolTip": "..\\hmiDlg.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T22:02:32.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "conW.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conW.cpp",
+              "RelativeDocumentMoniker": "..\\conW.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conW.cpp",
+              "RelativeToolTip": "..\\conW.cpp",
+              "ViewState": "AQIAABUAAAAAAAAAAAAtwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T19:38:56.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "conW.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conW.h",
+              "RelativeDocumentMoniker": "..\\conW.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conW.h",
+              "RelativeToolTip": "..\\conW.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T19:39:22.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "conPosDlg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPosDlg.cpp",
+              "RelativeDocumentMoniker": "..\\conPosDlg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPosDlg.cpp",
+              "RelativeToolTip": "..\\conPosDlg.cpp",
+              "ViewState": "AQIAACYAAAAAAAAAAAAtwDsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T18:56:38.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "conPosDlg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPosDlg.h",
+              "RelativeDocumentMoniker": "..\\conPosDlg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\conPosDlg.h",
+              "RelativeToolTip": "..\\conPosDlg.h",
+              "ViewState": "AQIAAAgAAAAAAAAAAAArwBkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T18:56:34.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "posDlg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\posDlg.h",
+              "RelativeDocumentMoniker": "..\\posDlg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\posDlg.h",
+              "RelativeToolTip": "..\\posDlg.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-22T23:10:15.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "basketCrane3UserWdgt.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\basketCrane3UserWdgt.h",
+              "RelativeDocumentMoniker": "..\\basketCrane3UserWdgt.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\basketCrane3\\basketCrane3UserWdgt.h",
+              "RelativeToolTip": "..\\basketCrane3UserWdgt.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T17:52:24.392Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

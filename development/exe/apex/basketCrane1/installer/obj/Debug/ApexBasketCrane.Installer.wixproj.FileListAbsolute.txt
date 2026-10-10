@@ -1,0 +1,6 @@
+C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\bin\Debug\ApexBasketCrane-Debug-x86.msi
+C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\bin\Debug\ApexBasketCrane-Debug-x86.wixpdb
+C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\ApexBasketCrane.Installer.wixproj.CoreCompileInputs.cache
+C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\ApexBasketCrane-Debug-x86.msi
+C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\ApexBasketCrane-Debug-x86.wixpdb
+C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\installer\obj\Debug\ApexBasketCrane.Installer.wixproj.BindTracking-neutral.txt

@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\stackingPlan\\sln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5454B57E-5D26-4911-8CED-F4B81F0F7E01}|apexStackingPlan.5.7.0.vcxproj|C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\stackingPlan\\app.ini||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.ini",
+              "DocumentMoniker": "C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\stackingPlan\\app.ini",
+              "RelativeDocumentMoniker": "..\\app.ini",
+              "ToolTip": "C:\\Users\\aflores\\OneDrive - Lorval Capital Management\\Documents\\sourceCode\\assimakis\\development\\exe\\apex\\stackingPlan\\app.ini",
+              "RelativeToolTip": "..\\app.ini",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
+              "WhenOpened": "2026-07-07T22:58:49.935Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

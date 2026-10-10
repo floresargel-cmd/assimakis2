@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/packetWarehouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommand>\\192.168.105.160\workingExes\station\apexPacketCraneStation.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>\\192.168.105.160\workingExes\station\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>192.168.105.160</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugRemote|Win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/packetWarehouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommand>C:\Assimakis\workingExes\apexPacketCraneStation.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\Assimakis\workingExes\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>20.20.20.133</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/packetWarehouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

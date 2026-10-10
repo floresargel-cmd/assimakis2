@@ -1,0 +1,16 @@
+
+  ConfigurationManager.cpp
+  BasketCrane.Configuration.vcxproj -> C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\#builds\BasketCrane.Configuration\BasketCrane.ConfigurationD.lib
+  Apex Basket Crane build version: 5.6.14
+  ap.cpp
+  b.cpp
+  bP.cpp
+  cr.cpp
+  emulate.conv.cpp
+  emulate.cr.cpp
+  emulate.mW.cpp
+  mW.cpp
+  main.cpp
+  plcDlg.cpp
+Qt5Guid.lib(qmatrix4x4.obj) : warning LNK4099: PDB 'Qt5Guid.pdb' was not found with 'Qt5Guid.lib(qmatrix4x4.obj)' or at 'C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\#builds\apexbasketcrane1\Qt5Guid.pdb'; linking object as if no debug info [C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\exe\apex\basketCrane1\sln\apexBasketCrane.5.5.1.static.x32.vcxproj]
+  apexBasketCrane.5.5.1.static.x32.vcxproj -> C:\Users\aflores\OneDrive - Lorval Capital Management\Documents\sourceCode\assimakis\development\#builds\apexbasketcrane1\apexbasketcrane1D.exe

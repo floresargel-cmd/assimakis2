@@ -1,0 +1,33 @@
+2026-03-27 15:15:20 [INFO] Application bootstrapper initialized.
+2026-03-27 15:15:20 [INFO] Database initialization started.
+2026-03-27 15:15:20 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 15:21:18 [INFO] Application bootstrapper initialized.
+2026-03-27 15:21:18 [INFO] Database initialization started.
+2026-03-27 15:21:18 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 15:26:05 [INFO] Application bootstrapper initialized.
+2026-03-27 15:26:10 [INFO] Database initialization started.
+2026-03-27 15:26:14 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:18:16 [INFO] Application bootstrapper initialized.
+2026-03-27 16:18:16 [INFO] Database initialization started.
+2026-03-27 16:18:16 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:18:58 [INFO] Application bootstrapper initialized.
+2026-03-27 16:18:58 [INFO] Database initialization started.
+2026-03-27 16:18:58 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:21:00 [INFO] Application bootstrapper initialized.
+2026-03-27 16:21:00 [INFO] Database initialization started.
+2026-03-27 16:21:00 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:24:29 [INFO] Application bootstrapper initialized.
+2026-03-27 16:24:29 [INFO] Database initialization started.
+2026-03-27 16:24:29 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:26:45 [INFO] Application bootstrapper initialized.
+2026-03-27 16:26:45 [INFO] Database initialization started.
+2026-03-27 16:26:45 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:31:12 [INFO] Application bootstrapper initialized.
+2026-03-27 16:31:12 [INFO] Database initialization started.
+2026-03-27 16:31:12 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:38:52 [INFO] Application bootstrapper initialized.
+2026-03-27 16:38:52 [INFO] Database initialization started.
+2026-03-27 16:38:52 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect
+2026-03-27 16:47:11 [INFO] Application bootstrapper initialized.
+2026-03-27 16:47:11 [INFO] Database initialization started.
+2026-03-27 16:47:11 [ERROR] Database open failed: [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified QODBC3: Unable to connect

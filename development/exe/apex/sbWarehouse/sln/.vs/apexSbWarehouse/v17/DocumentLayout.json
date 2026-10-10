@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\sln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\mW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\Gsw.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\posDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\posDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\conPos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\conPos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Conv.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\mW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincerPos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincerPos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Allpos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Conv.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\allPos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\Gsw.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD30D9-86D5-4108-A01E-B5A9395EF175}|apexSbWarehouse.5.7.0.vcxproj|C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Gs.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h",
+              "RelativeDocumentMoniker": "..\\..\\Gs.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.h",
+              "RelativeToolTip": "..\\..\\Gs.h",
+              "ViewState": "AQIAAKYAAAAAAAAAAAAuwLgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:12.983Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Gs.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp",
+              "RelativeDocumentMoniker": "..\\..\\Gs.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\Gs.cpp",
+              "RelativeToolTip": "..\\..\\Gs.cpp",
+              "ViewState": "AQIAABMAAAAAAAAAAIAwwBsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T16:34:13.022Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gsw.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\Gsw.h",
+              "RelativeDocumentMoniker": "..\\Gsw.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\Gsw.h",
+              "RelativeToolTip": "..\\Gsw.h",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAowBkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:13.024Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Gsw.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\Gsw.cpp",
+              "RelativeDocumentMoniker": "..\\Gsw.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\Gsw.cpp",
+              "RelativeToolTip": "..\\Gsw.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAACBjwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T16:34:13.025Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "mW.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\mW.h",
+              "RelativeDocumentMoniker": "..\\mW.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\mW.h",
+              "RelativeToolTip": "..\\mW.h",
+              "ViewState": "AQIAACEAAAAAAAAAAIAwwDIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:13.026Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mW.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\mW.cpp",
+              "RelativeDocumentMoniker": "..\\mW.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\mW.cpp",
+              "RelativeToolTip": "..\\mW.cpp",
+              "ViewState": "AQIAAFoBAAAAAAAAAAAjwGgBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T16:34:13.09Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pos.cpp",
+              "RelativeDocumentMoniker": "..\\pos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pos.cpp",
+              "RelativeToolTip": "..\\pos.cpp",
+              "ViewState": "AQIAANUAAAAAAAAAAIAwwOQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T16:34:13.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "posDlg.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\posDlg.h",
+              "RelativeDocumentMoniker": "..\\posDlg.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\posDlg.h",
+              "RelativeToolTip": "..\\posDlg.h",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAuwD8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:13.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "posDlg.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\posDlg.cpp",
+              "RelativeDocumentMoniker": "..\\posDlg.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\posDlg.cpp",
+              "RelativeToolTip": "..\\posDlg.cpp",
+              "ViewState": "AQIAAIYAAAAAAAAAAIBJwJoAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T16:34:13.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "pincer1.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1.cpp",
+              "RelativeDocumentMoniker": "..\\pincer1.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1.cpp",
+              "RelativeToolTip": "..\\pincer1.cpp",
+              "ViewState": "AQIAAPMAAAAAAAAAAGBnwP4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T16:34:13.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "pincer1.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1.h",
+              "RelativeDocumentMoniker": "..\\pincer1.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1.h",
+              "RelativeToolTip": "..\\pincer1.h",
+              "ViewState": "AQIAAB0AAAAAAAAAAGBnwCgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:13.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "pincer2.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer2.h",
+              "RelativeDocumentMoniker": "..\\pincer2.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer2.h",
+              "RelativeToolTip": "..\\pincer2.h",
+              "ViewState": "AQIAAB0AAAAAAAAAAIBpwCkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:13.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "pincer1Conv.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Conv.h",
+              "RelativeDocumentMoniker": "..\\pincer1Conv.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Conv.h",
+              "RelativeToolTip": "..\\pincer1Conv.h",
+              "ViewState": "AQIAAA8AAAAAAAAAAIBJwBwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-04T16:52:39.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "pincer1Conv.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Conv.cpp",
+              "RelativeDocumentMoniker": "..\\pincer1Conv.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Conv.cpp",
+              "RelativeToolTip": "..\\pincer1Conv.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAIBJwD4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T16:52:32.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "allPos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\allPos.h",
+              "RelativeDocumentMoniker": "..\\allPos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\allPos.h",
+              "RelativeToolTip": "..\\allPos.h",
+              "ViewState": "AQIAACcAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-04T17:33:33.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "conPos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\conPos.h",
+              "RelativeDocumentMoniker": "..\\conPos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\conPos.h",
+              "RelativeToolTip": "..\\conPos.h",
+              "ViewState": "AQIAABsAAAAAAAAAAIBJwDkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-04T18:37:01.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "conPos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\conPos.cpp",
+              "RelativeDocumentMoniker": "..\\conPos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\conPos.cpp",
+              "RelativeToolTip": "..\\conPos.cpp",
+              "ViewState": "AQIAAGcAAAAAAAAAAIAwwHoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T18:31:20.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "pincerPos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincerPos.h",
+              "RelativeDocumentMoniker": "..\\pincerPos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincerPos.h",
+              "RelativeToolTip": "..\\pincerPos.h",
+              "ViewState": "AQIAAEIAAAAAAAAAAIBJwFEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-21T19:10:52.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "pincerPos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincerPos.cpp",
+              "RelativeDocumentMoniker": "..\\pincerPos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincerPos.cpp",
+              "RelativeToolTip": "..\\pincerPos.cpp",
+              "ViewState": "AQIAADwBAAAAAAAAAIAwwE0BAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-21T19:10:56.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "pincer1Allpos.cpp",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Allpos.cpp",
+              "RelativeDocumentMoniker": "..\\pincer1Allpos.cpp",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pincer1Allpos.cpp",
+              "RelativeToolTip": "..\\pincer1Allpos.cpp",
+              "ViewState": "AQIAACQAAAAAAAAAAIBJwDUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-21T19:12:43.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "pos.h",
+              "DocumentMoniker": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pos.h",
+              "RelativeDocumentMoniker": "..\\pos.h",
+              "ToolTip": "C:\\Users\\maria\\Dropbox\\geo\\currentDevelopment\\exe\\apex\\sbWarehouse\\pos.h",
+              "RelativeToolTip": "..\\pos.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T16:34:13.256Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

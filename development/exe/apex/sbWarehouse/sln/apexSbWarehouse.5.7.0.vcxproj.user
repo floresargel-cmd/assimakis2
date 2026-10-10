@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/sbWarefouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment />
+    <RemoteDebuggerCommand>\\192.168.105.129\workingExes\packetCrane\apexSbWarehouse.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>\\192.168.105.129\workingExes\packetCrane\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>192.168.105.129</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugRemote|Win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/sbWarefouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment />
+    <RemoteDebuggerCommand>\\20.20.20.190\assimakis\workingExes\packetCrane\apexSbWarehouse.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>\\20.20.20.190\assimakis\workingExes\packetCrane\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>20.20.20.190</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/sbWarefouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment />
+    <RemoteDebuggerCommand>C:\assimakis\workingExes\packetCrane\starLinePacketWarehouseMy.5.7.0.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\assimakis\workingExes\packetCrane</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+    <RemoteDebuggerServerName>192.168.35.11</RemoteDebuggerServerName>
+    <LocalDebuggerCommand>
+    </LocalDebuggerCommand>
+  </PropertyGroup>
+</Project>

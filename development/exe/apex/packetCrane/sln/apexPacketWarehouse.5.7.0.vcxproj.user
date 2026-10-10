@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/packetWarehouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugRemote|win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/packetWarehouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommand>C:\Assimakis\workingExes\packetCrane\apexPacketWarehouse.5.7.0D.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\Assimakis\workingExes\packetCrane\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>20.20.20.254</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <LocalDebuggerWorkingDirectory>../../../../#workingDir/apex/packetWarehouse</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>
